@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 build/
+build/libs/CakeFactory.jar
 bin/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
