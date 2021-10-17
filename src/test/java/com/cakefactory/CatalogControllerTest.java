@@ -24,7 +24,7 @@ public class CatalogControllerTest {
     @Test
 	@DisplayName("index page returns the landing page")
 	void returnsLandingPage() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/catalog"))
+		mockMvc.perform(MockMvcRequestBuilders.get("/"))
 		.andExpect(MockMvcResultMatchers.status().isOk())
 		.andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("Cake Factory")));
 	}
