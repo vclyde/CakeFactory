@@ -2,10 +2,12 @@ spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/cakefactory
         username: postgres
-        password: admin
+        password: 
         driverClassName: org.postgresql.Driver
         initialization-mode: always
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL10Dialect
         hibernate.ddl-auto: update # When you launch the application for the first time - switch "none" to "create"
-
+    flyway:
+        baseline-on-migrate: true
+   

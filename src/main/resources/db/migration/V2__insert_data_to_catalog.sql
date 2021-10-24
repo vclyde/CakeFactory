@@ -2,6 +2,7 @@
  * Author:  cvelasquez
  * Created: Oct 20, 2021
  */
+TRUNCATE TABLE catalog;
 INSERT INTO catalog VALUES ('abcr', 'All Butter Croissant', 0.75);
 INSERT INTO catalog VALUES ('ccr', 'Chocolate Croissant', 0.95);
 INSERT INTO catalog VALUES ('b', 'Fresh Baguette', 1.60);
