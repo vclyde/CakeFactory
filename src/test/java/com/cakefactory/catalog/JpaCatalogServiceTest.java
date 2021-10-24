@@ -34,12 +34,13 @@ public class JpaCatalogServiceTest {
     @DisplayName("returns data from database")
     void returnDataFromDatabase() {
         Iterable<Item> items = this.jpaCatalogService.getItems();
-
         assertThat(items).hasSize(6);
 
         String title = "Victoria Sponge";
         saveTestItem("test-item-1", title, BigDecimal.valueOf(5.55));
+        items = this.jpaCatalogService.getItems();
         
+        assertThat(items).hasSize(7);
         assertThat(items).anyMatch(item -> title.equals(item.getTitle()));
     }
 
