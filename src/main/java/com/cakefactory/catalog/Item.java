@@ -1,4 +1,4 @@
-package com.cakefactory.app;
+package com.cakefactory.catalog;
 
 import java.math.BigDecimal;
 import lombok.Data;

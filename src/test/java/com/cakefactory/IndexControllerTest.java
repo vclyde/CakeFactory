@@ -1,4 +1,4 @@
-package com.cakefactory.app;
+package com.cakefactory;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class IndexControllerTests {
+class IndexControllerTest {
 
 	@Autowired
 	MockMvc mockMvc;
@@ -21,10 +21,9 @@ class IndexControllerTests {
 	@DisplayName("index page returns the landing page")
 	void contextLoads() throws Exception {
 
-		mockMvc.perform(MockMvcRequestBuilders.get("/"))
+		mockMvc.perform(MockMvcRequestBuilders.get("/index"))
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("Cake Factory")));
 
 	}
-
 }
